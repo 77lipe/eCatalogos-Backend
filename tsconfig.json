@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",              // versão do JS que o TS vai gerar
+    "module": "ESNext",              // usa módulos ES (import/export)
+    "moduleResolution": "Node",      // resolve imports como o Node faz
+    "esModuleInterop": true,         // compatibilidade com commonjs (require)
+    "strict": true,                  // ativa checagens rigorosas
+    "forceConsistentCasingInFileNames": true, // evita problemas de letra maiúscula/minúscula
+    "skipLibCheck": true             // ignora verificação de tipos de node_modules
+  },
+  "include": [
+    "./**/*.ts"  // inclui todos os arquivos .ts do projeto
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
