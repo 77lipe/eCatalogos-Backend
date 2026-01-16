@@ -1,13 +1,15 @@
 import { Request, Response} from 'express'
-import {ProductService} from '../services/ProductService' //Rota não existe ainda 
+import { ProductService } from '../services/products/ProductService' //Rota não existe ainda 
 
 export class ProductController {
     private service = new ProductService()
 
     list = async (req: Request, res: Response) => {
         try {
+
+            const { page, limit } = req.query
             
-            const products = await this.service.list()
+            const products = await this.service.list({page: Number(page), limit: Number(limit)})
             return res.json(products)
 
         } catch (err: any) {
