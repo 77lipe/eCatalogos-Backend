@@ -5,6 +5,8 @@ export class ProductController {
     private service = new ProductService()
 
     list = async (req: Request, res: Response) => {
+        console.log('QUERY', req.query); // TEMPORARIO
+        
         try {
 
             const { page, limit } = req.query

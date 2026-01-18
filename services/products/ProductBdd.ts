@@ -1,8 +1,12 @@
 import { prisma } from '../../database/prisma'
 
 export class ProductBdd {
-    async GetAll({ skip, get }: { skip: number, get: number}) {
+    async GetAll({ skip, take }: { skip: number, take: number}) {
+        console.log("skip:", skip, "Take:", take);
+        
         return prisma.products.findMany({
+            skip,
+            take,
             where: {deleted_at: null},
             include: {
                 variants: {

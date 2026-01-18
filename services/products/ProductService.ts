@@ -10,10 +10,12 @@ interface ListProductParams {
 export class ProductService {
     private repository = new ProductBdd()
 
-    async list({page = 1, limit = 15}: ListProductParams){
-        const {skip, get} = paginacao(page, limit)
+    async list({page = 1, limit = 20}: ListProductParams){
+        console.log("Page:", page, "limit:", limit); //TEMPORARIO
+        
+        const {skip, take} = paginacao(page, limit)
 
-        const products = await this.repository.GetAll({ skip, get })
+        const products = await this.repository.GetAll({ skip, take })
         return ProductRules.filterVarPrices(products)
     }
 }
