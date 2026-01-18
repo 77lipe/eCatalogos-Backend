@@ -28,21 +28,10 @@ import express from "express"
 import productRoutes from './routes/product.routes'
 
 const app = express()
-
-/**
- * Middlewares globais
- */
-
 app.use(express.json())
-
-/**
- * Rotas
- */
 
 app.use('/ecatalogos', productRoutes)
 
-app.get('/health', (req, res) =>{
-    return res.status(200).json({status: "OK"})
-})
+
 
 export default app

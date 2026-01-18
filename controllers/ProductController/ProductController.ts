@@ -1,5 +1,5 @@
 import { Request, Response} from 'express'
-import { ProductService } from '../services/products/ProductService' //Rota não existe ainda 
+import { ProductService } from '../../services/products/ProductService'  
 
 export class ProductController {
     private service = new ProductService()

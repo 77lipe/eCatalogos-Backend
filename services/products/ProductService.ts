@@ -1,6 +1,6 @@
-import { paginacao } from "../../utils/paginacao."
+import { paginacao } from "../../utils/paginacao"
 import { ProductBdd } from "./ProductBdd"
-import { ProductRules } from "./ProductRules"
+import { ProductRules } from "./ProductRule"
 
 interface ListProductParams {
     page?: number,
