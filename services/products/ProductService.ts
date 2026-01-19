@@ -1,11 +1,9 @@
 import { paginacao } from "../../utils/paginacao"
 import { ProductBdd } from "./ProductBdd"
 import { ProductRules } from "./ProductRule"
+import { ListProductParams } from "../../models/DTOs"
 
-interface ListProductParams {
-    page?: number,
-    limit?: number
-}
+
 
 export class ProductService {
     private repository = new ProductBdd()
