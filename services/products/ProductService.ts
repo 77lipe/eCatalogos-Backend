@@ -1,6 +1,6 @@
 import { paginacao } from "../../utils/paginacao"
 import { ProductBdd } from "./ProductBdd"
-import { ProductRules } from "./ProductRule"
+import { ProductRules } from "../Rule/ProductRule"
 import { ListProductParams } from "../../models/DTOs"
 
 

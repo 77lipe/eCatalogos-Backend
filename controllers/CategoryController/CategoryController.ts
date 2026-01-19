@@ -6,14 +6,15 @@ export class CategoryController {
 
     filterCategory = async (req: Request, res: Response) => {
 
-        const {category, subcategory} = req.query
-        console.log(category, subcategory);
+        const {category, subcategory, company_id} = req.query
+        console.log(category, subcategory, company_id);
         
         if(category != null || category != undefined || category != ""){
 
             const products = await this.service.execute({
-                category: String(category),
-                subcategory: String(subcategory)
+                category: Number(category),
+                subcategory: Number(subcategory),
+                company_id: Number(company_id)
             })
 
             if( products.length == 0){

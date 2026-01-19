@@ -1,5 +1,5 @@
 import { BrandBdd } from "./BrandBdd"
-import { ProductRules } from "../../products/ProductRule"
+import { ProductRules } from "../../Rule/ProductRule"
 
 export class BrandFilter{
     private repository = new BrandBdd()

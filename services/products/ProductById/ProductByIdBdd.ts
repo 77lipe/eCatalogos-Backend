@@ -1,20 +1,13 @@
 import { prisma } from "../../../database/prisma"
-import { CategoryFilter } from "../../../models/DTOs"
 
-
-
-export class CategoryFilterBdd {
-    async execute({ category, subcategory, company_id }: CategoryFilter) {
+export class ProductIdBdd {
+    async getIdProduct(idProduct: number){
         return prisma.products.findMany({
             where: {
                 deleted_at: null,
-                company_id: company_id,
-                category_id: category,
-                ...(subcategory && {
-                    subcategory_id: subcategory
-                })
-            }, 
-            include:{
+                id: Number(idProduct)
+            },
+            include: {
                 variants: {
                     include: {
                         skus: {

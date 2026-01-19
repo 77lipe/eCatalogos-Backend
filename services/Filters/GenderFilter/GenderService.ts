@@ -1,5 +1,5 @@
 import { GenderBdd } from "./GenderBdd"
-import { ProductRules } from "../../products/ProductRule"
+import { ProductRules } from "../../Rule/ProductRule"
 
 export class GenderFilter {
     private repository = new GenderBdd()
