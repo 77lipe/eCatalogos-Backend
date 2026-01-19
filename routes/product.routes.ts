@@ -6,6 +6,7 @@ import { GenderController } from "../controllers/GenderFilterController/GenderCo
 import { CategoryController } from "../controllers/CategoryController/CategoryController";
 import { ProductIdController } from "../controllers/ProductController/ProductByIdController";
 import { ProductPostController } from "../controllers/ProductController/ProductPostController";
+import { PutProductController } from "../controllers/ProductController/ProductPutController";
 
 const router = Router()
 const controllerProduct = new ProductController()
@@ -15,6 +16,7 @@ const controllerGender = new GenderController()
 const controllerCategory = new CategoryController()
 const controllerProductId = new ProductIdController()
 const controllerProductPost = new ProductPostController()
+const controllerProductPut = new PutProductController()
 
 router.get('/products', controllerProduct.list)
 router.get('/products/count', controllerCount.counter)
@@ -23,5 +25,6 @@ router.get('/products/gender', controllerGender.FilterGender)
 router.get('/products/category', controllerCategory.filterCategory)
 router.get('/products/:productId', controllerProductId.getParams)
 router.post('/products', controllerProductPost.ProductController)
+router.put('/products/:id', controllerProductPut.putProduct)
 
 export default router

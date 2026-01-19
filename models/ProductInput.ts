@@ -7,7 +7,8 @@ export interface SkuInput {
   size: string
   stock: number
   code: string
-  price: number
+  price: number,
+  multiple_quantity: number
   price_tables?: PriceTableSkuInput[]
 }
 
