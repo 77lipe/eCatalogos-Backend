@@ -19,7 +19,7 @@ export class PutProductController {
                     const resultPut = await this.service.execute(idProduct, data)
                     if(resultPut){
                 
-                        return res.json(resultPut)
+                        return res.json("Produto alterado com SUCESSO!!")
                     }else{
                         return res.status(400).json({message: "Não foi possível atualizar este produto"})
                     }

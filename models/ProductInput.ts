@@ -4,6 +4,7 @@ export interface PriceTableSkuInput {
 }
 
 export interface SkuInput {
+  id?: number
   size: string
   stock: number
   code: string
@@ -13,7 +14,9 @@ export interface SkuInput {
 }
 
 export interface VariantInput {
+  id?: number
   name: string
+  hex_code?: string
   skus?: SkuInput[]
 }
 
@@ -28,4 +31,5 @@ export interface Product {
   subcategory_id?: number
   prompt_delivery: boolean
   variants?: VariantInput[]
+  description: string
 }
